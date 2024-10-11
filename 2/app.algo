@@ -1,0 +1,24 @@
+ALGORITHM insertion_sort
+VAR
+    length:INTEGER
+    tab: ARRAY_OF FLOAT[length];
+    i, j, current:INTEGER
+BEGIN
+    Read(length)
+    FOR i FROM 0 TO length STEP 1 DO
+        Read(tab[i])
+    END_FOR
+    FOR i FROM 1 TO length-1 STEP 1  DO
+        current:=tab[i]
+        j:=i-1
+        WHILE (j>=0 and tab[j]> current) DO
+            tab[j+1] := tab[j]
+            j--
+        END_WHILE
+        tab[j+1]:=current
+    Write("the sorted array is:", tab)
+    END_FOR
+END
+
+
+

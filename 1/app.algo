@@ -1,0 +1,24 @@
+FUNCTION sentence() 
+VAR
+    vowels["A", "E", "I", "O", "U","a","e","i","o","u"]
+    i : INTEGER:=0;
+    space,words,nb_voy,l: INTEGER;
+BEGIN
+    read(sent);
+  WHILE (sent[i]<>".") DO
+ 
+    l=l+1;
+    IF (sent[i]=" ") THEN
+        space:= space +1;
+    END_IF
+    words:=space+1;
+    IF (sent[i] in voy) THEN
+ nb_voy=:nb_voy+1;
+    END_IF
+    i++;
+ END_WHILE
+    write("The length of the sentence is : ",l);
+    write("The number of words in the sentence is : ",words);
+    write("The number of vowels in the sentence : ",nb_voy);
+
+END
